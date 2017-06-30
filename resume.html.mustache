@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Resume</title>
+        <link href="resume.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="resume">
+            <div id="basics">
+                {{#basics}}
+                <h1>{{firstName}} {{lastName}}</h1>
+                <div class="summary"><h3>Summary</h3>{{summary}}</div>
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <div class="email"><a href="mailto:{{email}}">{{email}}</a></div>
+                    <div class="phone">{{phone}}</div>
+                    <div class="website"><a href="{{website}}">{{website}}</a></div>
+                    <div class="location">
+                        {{#location}}
+                        <div class="address1">{{address}}</div>
+                        <div class="cityStateZip">{{city}}, {{region}} {{postalCode}}</div>
+                        <div class="country">{{countryCode}}</div>
+                        {{/location}}
+                    </div>
+                </div>
+                {{/basics}}
+            </div>
+            <div id="work">
+                <h2>Work Experience</h2>
+                {{#work}}
+                <div class="job">
+                    <div class="jobHeader">
+                        <div class="company">{{company}}</div>
+                        <div class="website"><a href="{{website}}">{{website}}</a></div>
+                        <div class="position">{{position}}</div>
+                        <div class="dates">{{startDate}} - {{endDate}}{{^endDate}}Present{{/endDate}}</div>
+                        <ul class="highlights">
+                            {{#highlights}}
+                            <li>{{.}}</li>
+                            {{/highlights}}
+                        </ul>
+                    </div>
+                </div>
+                {{/work}}
+            </div>
+            <div class="education">
+                <h2>Education</h2>
+                {{#education}}
+                <div class="school">
+                    <div class="institution">{{institution}}</div>
+                    <div class="dates">{{startDate}} - {{endDate}}{{^endDate}}Present{{/endDate}}</div>
+                    <div class="studyType">{{studyType}}</div>
+                    <div class="area">{{area}}</div>
+                    <div class="gpa">{{gpa}}</div>
+                </div>
+                {{/education}}
+            </div>
+            <div class="skills">
+                <h2>Skills</h2>
+                {{#skills}}
+                <div class="skill">
+                    <div class="name">{{name}}</div>
+                    <div class="level">{{level}}</div>
+                    <ul class="keywords">
+                        {{#keywords}}
+                        <li>{{.}}</li>
+                        {{/keywords}}
+                    </ul>
+                </div>
+                {{/skills}}
+        </div>
+    </body>
+</html>

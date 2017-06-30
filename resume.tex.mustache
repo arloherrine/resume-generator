@@ -1,0 +1,109 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Configuration
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Themes: Awesome-CV
+\documentclass[11pt, a4paper]{awesome-cv}
+
+%%% Override a directory location for fonts(default: 'fonts/')
+\fontdir[fonts/]
+
+%%% Override color
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+%% Color for highlight
+% Define your custom color if you don't like awesome colors
+\colorlet{awesome}{awesome-red}
+%\definecolor{awesome}{HTML}{CA63A8}
+%% Colors for text
+%\definecolor{darktext}{HTML}{414141}
+%\definecolor{text}{HTML}{414141}
+%\definecolor{graytext}{HTML}{414141}
+%\definecolor{lighttext}{HTML}{414141}
+
+%%% Override a separator for social informations in header(default: ' | ')
+%\headersocialsep[\quad\textbar\quad]
+
+{{=<< >>=}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Personal Data
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Essentials
+<<#basics>>
+\name{<<firstName>>}{<<lastName>>}
+<<#location>>\address{<<address>>, <<city>>, <<region>> <<postalCode>>}<</location>>
+\mobile{<<phone>>} 
+%%% Social
+\email{<<email>>}
+\homepage{<<website>>}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Content
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Make a footer for CV with three arguments(<left>, <center>, <right>)
+\makecvfooter
+  {}
+  {<<firstName>> <<lastName>>~~~·~~~Résumé}
+  {\thepage}
+<</basics>>
+
+\begin{document}
+%%% Make a header for CV with personal data
+\makecvheader
+
+\cvsection{Experience}
+\begin{cventries}
+  <<#work>>
+  \cventry
+    {<<position>>}
+    {<<company>>}
+    {<<website>>}
+    {<<startDate>> - <<endDate>><<^endDate>>Present<</endDate>>}
+    {
+      \begin{cvitems}
+        <<#highlights>>\item {<<.>>}<</highlights>>
+      \end{cvitems}
+    }
+  <</work>>
+\end{cventries}
+
+\cvsection{Education}
+\begin{cventries}
+  <<#education>>
+  \cventry
+    {<<studyType>> in <<area>>}
+    {<<institution>>}
+    {<<gpa>> GPA}
+    {<<startDate>> - <<endDate>><<^endDate>>Present<</endDate>>}
+    {} % list
+  <</education>>
+\end{cventries}
+
+\cvsection{Skills}
+\begin{cventries}
+  <<#skills>>
+  \cventry
+    {<<#keywords>><<.>> \quad <</keywords>>}
+    {<<name>>}
+    {<<level>>}
+    {} % dates
+    {} % list
+  <</skills>>
+\end{cventries}
+
+\end{document}

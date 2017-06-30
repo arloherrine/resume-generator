@@ -1,0 +1,107 @@
+body {
+    background-color: rgb(51, 73, 96);
+    font-family: Helvetica, sans-serif;
+}
+
+#resume {
+    margin: 30px;
+    padding: 10px;
+    background-color: rgb(240, 240, 240);
+}
+
+h1 {
+    text-align: center;
+
+    font-size: 2.5em;
+    font-weight: bold;
+
+    border-bottom: 1px solid #AAAAAA;
+}
+
+h2 {
+    padding-top: 10px;
+    margin-bottom: 10px;
+
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+}
+
+#basics > .summary {
+    float: left;
+    width: 60%;
+}
+
+#basics > .contact {
+    float: left;
+    width: 40%;
+}
+
+.country {
+    display: none;
+}
+
+
+.jobHeader > div {
+    float:left;
+}
+
+.jobHeader > .company {
+    padding-right: 20px;
+    font-size: 1.25em;
+    color: #1122AA;
+}
+
+.jobHeader > .website {
+    padding-top: 0.25em;
+}
+
+.jobHeader > .position {
+    clear: left;
+    padding-right: 20px;
+}
+
+.jobHeader > .highlights {
+    clear: left;
+}
+
+.skill > div {
+    float:left;
+}
+
+.skill > .name {
+    padding-right: 20px;
+}
+
+.skill > .keywords {
+    clear: left;
+    padding-top: 5px;
+}
+
+.skill > .level {
+    font-size: 0.8em;
+    color: #fff;
+    background: rgb(51, 96, 71);
+
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 2.5px 5px;
+}
+
+.keywords > li {
+    display: inline;
+
+    font-size: 0.7em;
+    font-weight: bold;
+    color: #fff;
+    background: rgb(51, 73, 96);
+
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
